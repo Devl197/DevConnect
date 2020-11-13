@@ -17,9 +17,12 @@ const ProfileEducation = ({
     <p>
       <strong>Field of Study: </strong> {fieldofstudy}
     </p>
+    { description ? 
     <p>
       <strong>Description: </strong> {description}
     </p>
+    : null
+    }
   </div>
 );
 
