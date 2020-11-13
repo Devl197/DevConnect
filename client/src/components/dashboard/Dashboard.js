@@ -29,8 +29,8 @@ const Dashboard = ({
       {profile !== null ? (
         <>
           <DashBoardActions />
-          <Experience experience={profile.experience} />
-          <Education education={profile.education} />
+          {profile.experience.length > 0 ?  <Experience experience={profile.experience} /> : null}
+          {profile.education.length > 0 ? <Education education={profile.education} /> : null}
           <div className='my-2'>
             <button className='btn btn-danger' onClick={() => deleteAccount()}>
               <i className='fas fa-user-minus'></i>Delete my Account
